@@ -12,11 +12,12 @@ function Book({ book }) {
 }
 
 Book.propTypes = {
-  book: PropTypes.instanceOf(Object),
-};
-
-Book.defaultProps = {
-  book: {},
+  book: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;

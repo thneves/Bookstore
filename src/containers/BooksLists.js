@@ -1,8 +1,9 @@
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-// import { useState } from 'react';
-// import { connect } from 'react-redux';
+import { createBook, removeBook } from '../actions/actions';
+import Book from '../components/Book';
 
-export default function BooksList({ book }) {
+function BooksList({ books }) {
   return (
     <div className="table-div">
       <table>
@@ -12,26 +13,28 @@ export default function BooksList({ book }) {
           <th>Author</th>
           <th>Category</th>
         </tr>
-        <tr>
-          <td>{book.id}</td>
-          <td>{book.title}</td>
-          <td>{book.author}</td>
-          <td>{book.category}</td>
-        </tr>
+        {
+           books.map((book) => <Book key={book} book={book} />)
+         }
       </table>
     </div>
   );
 }
 
 BooksList.propTypes = {
-  book: PropTypes.instanceOf(Object),
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
-BooksList.defaultProps = {
-  book: {
-    id: '1',
-    title: 'Fly',
-    author: 'JK',
-    category: 'Mistery',
-  },
-};
+const mapStateToProps = (state) => ({ books: state.books });
+const mapDispatchToProps = (dispatch) => ({
+  create: (book) => dispatch(createBook(book)),
+  delete: (book) => dispatch(removeBook(book)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
