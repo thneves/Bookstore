@@ -28,7 +28,6 @@ const initialState = [
 ];
 
 const store = createStore(reducer, { books: initialState });
-console.log(store.getState());
 
 ReactDOM.render(
   <React.StrictMode>
