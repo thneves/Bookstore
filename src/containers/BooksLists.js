@@ -7,15 +7,17 @@ function BooksList({ books }) {
   return (
     <div className="table-div">
       <table>
-        <tr>
-          <th>Book Id</th>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Category</th>
-        </tr>
-        {
-           books.map((book) => <Book key={book} book={book} />)
-         }
+        <tbody>
+          <tr>
+            <th>Book Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Category</th>
+          </tr>
+          {
+             books.map((book) => <Book key={book.id} book={book} />)
+           }
+        </tbody>
       </table>
     </div>
   );

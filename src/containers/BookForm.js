@@ -11,7 +11,7 @@ export default function BookForm() {
           <input type="text" name="author" placeholder="Author" />
         </label>
         <select name="categories" value="categories">
-          {categories.map((cat) => (<option title="Categories" key={Math.random}>{cat}</option>))}
+          {categories.map((cat) => (<option title="Categories" key={Math.floor(Math.random() * 100)}>{cat}</option>))}
         </select>
         <button type="submit">Add Book</button>
       </form>
