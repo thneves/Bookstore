@@ -1,5 +1,7 @@
+import * as action from './actionTypes';
+
 const addBook = (book) => ({
-  type: 'ADD_BOOK',
+  type: action.ADD_BOOK,
   payload: book,
 });
 
