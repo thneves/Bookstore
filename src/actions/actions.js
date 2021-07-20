@@ -1,8 +1,13 @@
-import * as action from './actionTypes';
+import * as actions from './actionTypes';
 
-const addBook = (book) => ({
-  type: action.ADD_BOOK,
+const createBook = (book) => ({
+  type: actions.CREATE_BOOK,
   payload: book,
 });
 
-export default addBook;
+const removeBook = (book) => ({
+  type: actions.REMOVE_BOOK,
+  payload: book,
+});
+
+export { createBook, removeBook };
