@@ -20,9 +20,6 @@
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
-    "stylelint-config-standard": "21.x",
-    "stylelint-csstree-validator": "1.x",
-    "stylelint-scss": "3.x",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -48,5 +45,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.20.1"
   }
 }
