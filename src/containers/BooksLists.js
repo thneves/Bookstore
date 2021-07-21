@@ -1,9 +1,23 @@
 import { useSelector, useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
-import { createBook, removeBook } from '../actions/actions';
+import { removeBook } from '../actions/actions';
 import Book from '../components/Book';
 
-function BooksList({ books }) {
+function BooksList() {
+  const list = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  function handleRemoveBook(e) {
+    dispatch(removeBook(e));
+  }
+
+  const printList = list.books.map((book) => (
+    <Book
+      key={book.id}
+      book={book}
+      handleClickRemove={handleRemoveBook}
+    />
+  ));
+
   return (
     <div className="table-div">
       <table>
@@ -14,23 +28,11 @@ function BooksList({ books }) {
             <th>Author</th>
             <th>Category</th>
           </tr>
-          {
-             books.map((book) => <Book key={book.id} book={book} />)
-           }
+          { printList }
         </tbody>
       </table>
     </div>
   );
 }
-
-BooksList.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
 
 export default BooksList;

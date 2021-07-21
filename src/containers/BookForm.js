@@ -25,7 +25,6 @@ const BookForm = () => {
       author: '',
       category: '',
     });
-    console.log(book);
   };
 
   const handleChange = (e) => {
