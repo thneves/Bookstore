@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook, removeBook } from '../actions/actions';
 import Book from '../components/Book';
@@ -33,10 +33,4 @@ BooksList.propTypes = {
   ).isRequired,
 };
 
-const mapStateToProps = (state) => ({ books: state.books });
-const mapDispatchToProps = (dispatch) => ({
-  create: (book) => dispatch(createBook(book)),
-  delete: (book) => dispatch(removeBook(book)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
+export default BooksList;
