@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { createBook } from '../actions/actions';
 
 const BookForm = () => {
-  const categories = ['Action', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];
+  const categories = ['Thriller', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];
 
   const dispatch = useDispatch();
 

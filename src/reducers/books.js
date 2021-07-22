@@ -19,6 +19,24 @@ const initialState = [
     author: 'Uncle Bob',
     category: 'Learning',
   },
+  {
+    id: Math.floor(Math.random() * 100) + 1,
+    title: 'Norwegian Wood',
+    author: 'Haruki Murakami',
+    category: 'Drama',
+  },
+  {
+    id: Math.floor(Math.random() * 100) + 1,
+    title: 'Van Gogh',
+    author: 'David Haziot',
+    category: 'Biography',
+  },
+  {
+    id: Math.floor(Math.random() * 100) + 1,
+    title: 'Fight Club',
+    author: 'Chuck Palahniuk',
+    category: 'Thriller',
+  },
 ];
 
 const bookReducer = (state = initialState, action) => {
