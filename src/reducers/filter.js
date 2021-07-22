@@ -1,11 +1,13 @@
 import { CHANGE_FILTER } from '../actions/actionTypes';
 
-const filterState = ['Thriller', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];
+const filterInitialState = 'All';
 
-const filterReducer = (state = filterState, action) => {
+const filterReducer = (state = filterInitialState, action) => {
+  let newState;
   switch (action.type) {
     case CHANGE_FILTER:
-      return state.filter((category) => category === action.payload.category);
+      newState = action.payload;
+      return newState;
     default:
       return state;
   }

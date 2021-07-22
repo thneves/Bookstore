@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-const CategoryFilter = ({ handleClick }) => (
+const CategoryFilter = ({ handleFilter }) => (
   <>
     <label htmlFor="books-categories">
       Filter by Category:
-      <select id="books-categories" name="categories" onChange={handleClick}>
+      <select id="books-categories" name="categories" onChange={handleFilter}>
         <option>All</option>
         <option value="Thriller">Thriller</option>
         <option value="Biography">Biography</option>
@@ -18,7 +18,7 @@ const CategoryFilter = ({ handleClick }) => (
 );
 
 CategoryFilter.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  handleFilter: PropTypes.func.isRequired,
 };
 
 export default CategoryFilter;
