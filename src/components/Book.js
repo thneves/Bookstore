@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 
 function Book({ book, handleClickRemove }) {
-  function handleClick() {
+  const handleClick = () => {
     handleClickRemove(book);
-  }
+  };
+
   return (
     <tr>
       <td>{book.id}</td>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createBook } from '../actions/actions';
+import { createBook } from '../actions';
 
 const BookForm = () => {
   const categories = ['Thriller', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];

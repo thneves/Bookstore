@@ -1,20 +1,20 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook, changeFilter } from '../actions/actions';
+import { removeBook, changeFilter } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
-function BooksList() {
+const BooksList = () => {
   const bookListState = useSelector((state) => state.books);
   const filterState = useSelector((state) => state.filter);
   const dispatch = useDispatch();
 
-  function handleRemoveBook(e) {
+  const handleRemoveBook = (e) => {
     dispatch(removeBook(e));
-  }
+  };
 
-  function handleFilterChange(e) {
+  const handleFilterChange = (e) => {
     dispatch(changeFilter(e.target.value.toString()));
-  }
+  };
 
   const printFilteredBookList = bookListState.map((book) => {
     let filtered = [];
@@ -56,6 +56,6 @@ function BooksList() {
       <CategoryFilter handleFilter={handleFilterChange} />
     </div>
   );
-}
+};
 
 export default BooksList;
