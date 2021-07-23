@@ -1,0 +1,48 @@
+#top-panel {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+}
+
+.nav {
+  margin-left: 6.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookstore-h1 {
+  font-size: 1.875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.books-h4 {
+  font-size: 0.813rem;
+  font-family: Montserrat, sans-serif;
+  margin: 0 2.5rem;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.books-categories {
+  font-size: 0.8rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1.9px;
+}
+
+.profile-circle {
+  width: 3.1rem;
+  height: 3.1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 5000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
