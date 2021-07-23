@@ -24,17 +24,7 @@ const BooksList = () => {
     <>
       <CategoryFilter handleFilter={handleFilterChange} />
       <div className="table-div">
-        <table>
-          <tbody>
-            <tr>
-              <th>Book Id</th>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Category</th>
-            </tr>
-            { PrintBook }
-          </tbody>
-        </table>
+        { PrintBook }
         <hr />
       </div>
     </>

@@ -1,7 +1,8 @@
 #top-panel {
   display: flex;
   justify-content: space-around;
-  background-color: #ffffff;
+  background-color: #fff;
+  margin-bottom: 2.35rem;
 }
 
 .nav {

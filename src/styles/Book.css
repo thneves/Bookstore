@@ -1,0 +1,68 @@
+#book-box {
+  padding: 2rem 0 1.75rem 1.68rem;
+  width: 15rem;
+  margin-bottom: 2rem;
+  background-color: white;
+}
+
+/* .book-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+.book-cat {
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #888;
+}
+
+.book-title {
+  font-size: 1.5rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  color: #121212;
+  letter-spacing: -0.2px;
+}
+
+.book-author {
+  font-size: 0.875rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  color: #4386bf;
+  margin-top: -0.8rem;
+}
+
+/* BUTTONS */
+
+.buttons-div {
+  margin-top: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-buttons {
+  font-size: 0.875rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  background-color: transparent;
+}
+
+.remove-btn:hover {
+  cursor: pointer;
+  font-weight: 400;
+  color: #1c65a5;
+}
+
+.comment-btn {
+  padding-right: 1.2rem;
+  border-right: 1px solid #e8e8e8;
+}
+
+.edit-btn {
+  padding-left: 1.2rem;
+  border-left: 1px solid #e8e8e8;
+}
