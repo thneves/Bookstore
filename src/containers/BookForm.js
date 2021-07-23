@@ -11,7 +11,7 @@ const BookForm = () => {
     id: Math.floor(Math.random() * 1000000),
     title: '',
     author: '',
-    category: '',
+    category: 'Thriller',
   });
 
   const handleSubmit = (e) => {
@@ -23,7 +23,7 @@ const BookForm = () => {
       id: 0,
       title: '',
       author: '',
-      category: '',
+      category: 'Thriller',
     });
   };
 
