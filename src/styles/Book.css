@@ -1,8 +1,15 @@
-#book-box {
-  padding: 2rem 0 1.75rem 1.68rem;
-  width: 15rem;
-  margin-bottom: 2rem;
+#book-panel {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
+  margin: 0 12% 1.5rem 12%;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.book-box {
+  padding: 1.5rem 0 1.75rem 1.68rem;
+  width: 15rem;
 }
 
 /* .book-details {
@@ -65,4 +72,103 @@
 .edit-btn {
   padding-left: 1.2rem;
   border-left: 1px solid #e8e8e8;
+}
+
+/* RIGHT SIDE OF PANEL */
+
+.progress-div {
+  display: flex;
+  padding-right: 10%;
+}
+
+.percentage-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5rem;
+}
+
+.progress-circle {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #1c65a5;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 50%;
+  background-color: #1c65a5;
+}
+
+.progress-circle::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+.status-box {
+  display: flex;
+  flex-direction: column;
+  padding-right: 5rem;
+  border-right: 1px solid #e8e8e8;
+}
+
+.percentage {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #121212;
+}
+
+.percentage-status {
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #888;
+}
+
+.chaper-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.chapter-box-h4 {
+  font-size: 0.813rem;
+  font-family: 'Roboto Slan', sans-serif;
+  font-weight: 300;
+  color: #888;
+  margin-top: 2rem;
+}
+
+.current-chapter {
+  font-size: 1rem;
+  font-family: 'Roboto Slan', sans-serif;
+  font-weight: 300;
+  color: #121212;
+}
+
+.chapter-btn {
+  font-size: 0.815rem;
+  font-family: 'Roboto Slan', sans-serif;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 0.5px;
+  text-align: center;
+  background-color: #0290ff;
+  border: 1px solid #0290ff;
+  border-radius: 3px;
+  padding: 0.436rem 1.888rem 0.5rem 1.375rem;
+  margin-top: 1rem;
 }

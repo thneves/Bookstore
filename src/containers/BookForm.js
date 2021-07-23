@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createBook } from '../actions';
+import '../styles/BookForm.css';
 
 const BookForm = () => {
   const categories = ['Thriller', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];
@@ -16,6 +17,10 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (book.title === '' || book.author === '') {
+      alert('What u doing? Fill the forms! And remember...'); /* eslint-disable-line no-alert */
+      return;
+    }
     setBook({ ...book });
     dispatch(createBook(book));
     setBook({
@@ -51,20 +56,28 @@ const BookForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="book-title">
-          <input type="text" name="title" id="book-title" placeholder="Title" minLength="2" onChange={handleChange} value={book.title} />
-        </label>
-        <label htmlFor="author">
-          <input type="text" name="author" id="book-author" placeholder="Author" minLength="6" onChange={handleChange} value={book.author} />
-        </label>
-        <select name="categories" id="category" value={book.category} onChange={handleChange}>
-          {categories.map((cat) => (<option title="Categories" key={Math.floor(Math.random() * 10000000)}>{cat}</option>))}
-        </select>
-        <button type="submit">Add Book</button>
-      </form>
-    </div>
+    <>
+      <hr />
+      <div id="book-form-div">
+        <h1 className="form-h1"> ADD NEW BOOK</h1>
+        <form className="form" onSubmit={handleSubmit}>
+          <label htmlFor="book-title">
+            <input className="form-inputs" type="text" name="title" id="book-title" placeholder="Book title" minLength="2" onChange={handleChange} value={book.title} />
+          </label>
+          <label htmlFor="author">
+            <input className="form-inputs" type="text" name="author" id="book-author" placeholder="Book Author" minLength="6" onChange={handleChange} value={book.author} />
+          </label>
+          <select name="categories" id="categories" required className="form-inputs select-input" value={book.category} onChange={handleChange}>
+            {categories.map((cat) => (
+              <option key={Math.floor(Math.random() * 10000000)}>
+                {cat}
+              </option>
+            ))}
+          </select>
+          <button className="form-button" type="submit">ADD BOOK</button>
+        </form>
+      </div>
+    </>
   );
 };
 

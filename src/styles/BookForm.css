@@ -1,0 +1,57 @@
+#book-form-div {
+  /* background-color: white; */
+  padding: 0 12% 1.5rem 12%;
+  /* border-top: 1px solid #e8e8e8; */
+  border-radius: 4px;
+  margin-bottom: 200px;
+}
+
+hr {
+  margin: 2rem 12%;
+  border: solid 1px #e8e8e8;
+}
+
+.form-h1 {
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #888;
+  padding-bottom: 5px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inputs {
+  padding: 0.6rem 10% 0.6rem 0.4rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #888;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+
+.select-input {
+  padding-right: 5%;
+}
+
+.form-button {
+  font-size: 1rem;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  background-color: #0290ff;
+  border: 1px solid transparent;
+  padding: 0.4rem 3rem 0.4rem 3rem;
+  transition: 0.2s;
+}
+
+.form-button:hover {
+  cursor: pointer;
+  background-color: #086ebb;
+}
