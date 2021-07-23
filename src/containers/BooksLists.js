@@ -1,21 +1,23 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../actions/actions';
+import { removeBook, changeFilter } from '../actions';
 import Book from '../components/Book';
+import CategoryFilter from '../components/CategoryFilter';
 
-function BooksList() {
-  const list = useSelector((state) => state);
+const BooksList = () => {
+  const bookListState = useSelector((state) => state.books);
+  const filterState = useSelector((state) => state.filter);
   const dispatch = useDispatch();
 
-  function handleRemoveBook(e) {
+  const handleRemoveBook = (e) => {
     dispatch(removeBook(e));
-  }
+  };
 
-  const printList = list.books.map((book) => (
-    <Book
-      key={book.id}
-      book={book}
-      handleClickRemove={handleRemoveBook}
-    />
+  const handleFilterChange = (e) => {
+    dispatch(changeFilter(e.target.value.toString()));
+  };
+
+  const PrintBook = bookListState.filter((book) => book.category === filterState || filterState === 'All').map((book) => (
+    <Book key={book.id} book={book} handleClickRemove={handleRemoveBook} />
   ));
 
   return (
@@ -28,11 +30,13 @@ function BooksList() {
             <th>Author</th>
             <th>Category</th>
           </tr>
-          { printList }
+          { PrintBook }
         </tbody>
       </table>
+      <hr />
+      <CategoryFilter handleFilter={handleFilterChange} />
     </div>
   );
-}
+};
 
 export default BooksList;

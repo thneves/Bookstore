@@ -1,6 +1,6 @@
 import * as actions from '../actions/actionTypes';
 
-const initialState = [
+const booksInitialState = [
   {
     id: Math.floor(Math.random() * 100) + 1,
     title: 'Kafka on the Shore',
@@ -19,9 +19,27 @@ const initialState = [
     author: 'Uncle Bob',
     category: 'Learning',
   },
+  {
+    id: Math.floor(Math.random() * 100) + 1,
+    title: 'Norwegian Wood',
+    author: 'Haruki Murakami',
+    category: 'Drama',
+  },
+  {
+    id: Math.floor(Math.random() * 100) + 1,
+    title: 'Van Gogh',
+    author: 'David Haziot',
+    category: 'Biography',
+  },
+  {
+    id: Math.floor(Math.random() * 100) + 1,
+    title: 'Fight Club',
+    author: 'Chuck Palahniuk',
+    category: 'Thriller',
+  },
 ];
 
-const bookReducer = (state = initialState, action) => {
+const bookReducer = (state = booksInitialState, action) => {
   switch (action.type) {
     case actions.CREATE_BOOK:
       return [...state, action.payload];

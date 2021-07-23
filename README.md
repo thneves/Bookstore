@@ -28,6 +28,7 @@ Clone this repo in your local machine with:
 
 In the project directory, you can run:
 
+- `yarn install` - wait for the installations finish, then run the following command:
 - `yarn start`
 
 Runs the app in the development mode.\

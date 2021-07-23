@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createBook } from '../actions/actions';
+import { createBook } from '../actions';
 
 const BookForm = () => {
-  const categories = ['Action', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];
+  const categories = ['Thriller', 'Biography', 'Mistery', 'Sci-Fi', 'Drama', 'Learning'];
 
   const dispatch = useDispatch();
 
@@ -11,7 +11,7 @@ const BookForm = () => {
     id: Math.floor(Math.random() * 1000000),
     title: '',
     author: '',
-    category: '',
+    category: 'Thriller',
   });
 
   const handleSubmit = (e) => {
@@ -23,7 +23,7 @@ const BookForm = () => {
       id: 0,
       title: '',
       author: '',
-      category: '',
+      category: 'Thriller',
     });
   };
 
@@ -54,10 +54,10 @@ const BookForm = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="book-title">
-          <input type="text" name="title" id="book-title" placeholder="Title" onChange={handleChange} value={book.title} />
+          <input type="text" name="title" id="book-title" placeholder="Title" minLength="2" onChange={handleChange} value={book.title} />
         </label>
         <label htmlFor="author">
-          <input type="text" name="author" id="book-author" placeholder="Author" onChange={handleChange} value={book.author} />
+          <input type="text" name="author" id="book-author" placeholder="Author" minLength="6" onChange={handleChange} value={book.author} />
         </label>
         <select name="categories" id="category" value={book.category} onChange={handleChange}>
           {categories.map((cat) => (<option title="Categories" key={Math.floor(Math.random() * 10000000)}>{cat}</option>))}
