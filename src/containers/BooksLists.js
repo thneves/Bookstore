@@ -16,27 +16,8 @@ const BooksList = () => {
     dispatch(changeFilter(e.target.value.toString()));
   };
 
-  const printFilteredBookList = bookListState.map((book) => {
-    let filtered = [];
-    if (book.category === filterState) {
-      filtered.push(book);
-    }
-    filtered = filtered.map((book) => (
-      <Book
-        key={book.id}
-        book={book}
-        handleClickRemove={handleRemoveBook}
-      />
-    ));
-    return filtered;
-  });
-
-  const printBookList = bookListState.map((book) => (
-    <Book
-      key={book.id}
-      book={book}
-      handleClickRemove={handleRemoveBook}
-    />
+  const PrintBook = bookListState.filter((book) => book.category === filterState || filterState === 'All').map((book) => (
+    <Book key={book.id} book={book} handleClickRemove={handleRemoveBook} />
   ));
 
   return (
@@ -49,7 +30,7 @@ const BooksList = () => {
             <th>Author</th>
             <th>Category</th>
           </tr>
-          { filterState === 'All' ? printBookList : printFilteredBookList }
+          { PrintBook }
         </tbody>
       </table>
       <hr />
