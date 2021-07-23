@@ -54,10 +54,10 @@ const BookForm = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="book-title">
-          <input type="text" name="title" id="book-title" placeholder="Title" onChange={handleChange} value={book.title} />
+          <input type="text" name="title" id="book-title" placeholder="Title" minLength="2" onChange={handleChange} value={book.title} />
         </label>
         <label htmlFor="author">
-          <input type="text" name="author" id="book-author" placeholder="Author" onChange={handleChange} value={book.author} />
+          <input type="text" name="author" id="book-author" placeholder="Author" minLength="6" onChange={handleChange} value={book.author} />
         </label>
         <select name="categories" id="category" value={book.category} onChange={handleChange}>
           {categories.map((cat) => (<option title="Categories" key={Math.floor(Math.random() * 10000000)}>{cat}</option>))}
