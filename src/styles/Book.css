@@ -88,36 +88,6 @@
   padding-right: 5rem;
 }
 
-.progress-circle {
-  position: relative;
-  display: inline-block;
-  margin: 1rem;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: #1c65a5;
-}
-
-.progress-circle::before {
-  content: '';
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 3.8rem;
-  height: 3.8rem;
-  border-radius: 50%;
-  background-color: #1c65a5;
-}
-
-.progress-circle::after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #888;
-}
-
 .status-box {
   display: flex;
   flex-direction: column;
@@ -171,4 +141,23 @@
   border-radius: 3px;
   padding: 0.436rem 1.888rem 0.5rem 1.375rem;
   margin-top: 1rem;
+}
+
+.progress-circle {
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  background-repeat: no-repeat;
+  background-image:
+    linear-gradient(white, white),
+    linear-gradient(30deg, lightgrey 36%, lightgrey 30%),
+    linear-gradient(120deg, #0290ff 36%, #0290ff 30%),
+    linear-gradient(300deg, #0290ff 36%, #0290ff 100%),
+    linear-gradient(210deg, #0290ff 36%, #0290ff 30%);
+  background-position: center center, left top, right top, left bottom, right bottom;
+  background-origin: content-box, border-box, border-box, border-box, border-box;
+  background-clip: content-box, border-box, border-box, border-box, border-box;
 }

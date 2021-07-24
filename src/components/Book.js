@@ -22,11 +22,9 @@ function Book({ book, handleClickRemove }) {
       </div>
       <div className="progress-div">
         <div className="percentage-box">
-          <div className="progress-circle">
-            <span />
-          </div>
+          <div className="progress-circle" />
           <div className="status-box">
-            <span className="percentage">90%</span>
+            <span className="percentage">75%</span>
             <span className="percentage-status">Completed</span>
           </div>
         </div>
