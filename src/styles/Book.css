@@ -12,12 +12,6 @@
   width: 15rem;
 }
 
-/* .book-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
 .book-cat {
   font-size: 0.875rem;
   font-family: 'Montserrat', sans-serif;
