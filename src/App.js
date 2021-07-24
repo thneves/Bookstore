@@ -6,9 +6,8 @@ import BooksList from './containers/BooksLists';
 function App() {
   return (
     <div>
-      <h1>Magic Books Inc.</h1>
-      <BookForm />
       <BooksList />
+      <BookForm />
     </div>
   );
 }
