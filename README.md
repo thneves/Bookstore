@@ -1,11 +1,15 @@
 # Bookstore - CMS
 
+Web application to manage a bookstore by maintaining its state. You can add new books and filter your bookstore by category. This project
+was created to practice the use of React and Redux.
+
 [Bookstore - CMS](https://bookstore-cms-ocean.herokuapp.com/)
+
+![screenshot](./screenshot.png)
 
 ## 💻 Project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 
 ## 🧪 Built With
 
@@ -15,7 +19,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## 🚀 Run This Project In Your Local Machine:
 
-### You need:
+### You need installed in your machine:
 
 - `yarn`
 - `nodejs`
