@@ -23,9 +23,7 @@ const BooksList = () => {
   return (
     <>
       <CategoryFilter handleFilter={handleFilterChange} />
-      <div>
-        { PrintBook }
-      </div>
+      { PrintBook }
     </>
   );
 };

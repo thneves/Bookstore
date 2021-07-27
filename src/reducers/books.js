@@ -1,43 +1,11 @@
 import * as actions from '../actions/actionTypes';
 
-const booksInitialState = [
-  {
-    id: Math.floor(Math.random() * 100) + 1,
-    title: 'Kafka on the Shore',
-    author: 'Haruki Murakami',
-    category: 'Mistery',
-  },
-  {
-    id: Math.floor(Math.random() * 100) + 1,
-    title: 'Dune',
-    author: 'Frank Herbert',
-    category: 'Sci-Fi',
-  },
-  {
-    id: Math.floor(Math.random() * 100) + 1,
-    title: 'Clean Code',
-    author: 'Uncle Bob',
-    category: 'Learning',
-  },
-  {
-    id: Math.floor(Math.random() * 100) + 1,
-    title: 'Norwegian Wood',
-    author: 'Haruki Murakami',
-    category: 'Drama',
-  },
-  {
-    id: Math.floor(Math.random() * 100) + 1,
-    title: 'Van Gogh',
-    author: 'David Haziot',
-    category: 'Biography',
-  },
-  {
-    id: Math.floor(Math.random() * 100) + 1,
-    title: 'Fight Club',
-    author: 'Chuck Palahniuk',
-    category: 'Thriller',
-  },
-];
+const booksInitialState = [{
+  id: Math.floor(Math.random() * 1002323) + 1,
+  title: '',
+  author: '',
+  category: '',
+}];
 
 const bookReducer = (state = booksInitialState, action) => {
   switch (action.type) {
